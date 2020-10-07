@@ -156,7 +156,7 @@ This assignment deals with row equivalent matrices.
 \end{abstract}
 Download  tex file from 
 \begin{lstlisting}
-https://github.com/satyam463/Assignment-7/blob/master/assignment%207.tex
+https://github.com/satyam463/Assignment-8/blob/main/Assignment%208%20.tex
 \end{lstlisting}
 \section{Problem Statement}
 Prove that the following two matrices are not row equivalent 
@@ -164,7 +164,7 @@ Prove that the following two matrices are not row equivalent
     \myvec{2&0&0\\a&-1&0\\b&c&3}, \myvec{1&1&2\\-2&0&-1\\1&3&5}
 \end{align}
  \section{solution}
- Call the first matrix $\vec{A}$ and the second matrix $\vec{B}$. The matrix $\vec{A}{'}$ is  row reduced echelon form of $\vec{A}$ 
+ Call the first matrix $\vec{A}$ and the second matrix $\vec{B}$. The matrix $\vec{A}{'}$ is  row reduced echelon form of $\vec{A}$  
  \begin{align}
      \vec{A}{'}=\myvec{2&0&0\\a&-1&0\\b&c&3}
      \xleftrightarrow[R_2\rightarrow R_2-aR_1]{R_1\rightarrow R_1/2}\myvec{1&0&0\\0&-1&0\\b&c&3}\\
@@ -177,10 +177,11 @@ Prove that the following two matrices are not row equivalent
    \vec{A}{'}\vec{X}=0
    \end{align}
    \begin{align}
-   \implies rank(\vec{A}{'})=3 = n (order of matrix)
+   \implies rank(\vec{A}{'})+null(\vec{A}{'})^{T}=m\\
+   \implies rank(\vec{A}{'}) = 3-0
    \end{align}
-   Therefore it has trivial solution i.e. (0,0,0)
-   Now the matrix $\vec{B}{'}$ is row reduced echelon form of $\vec{B}$  
+   Therefore it has trivial solution i.e. (0,0,0)\\
+   The matrix $\vec{B}{'}$ is row reduced echelon form of $\vec{B}$  
     \begin{align}
      \vec{B}{'}=\myvec{1&1&2\\-2&0&-1\\1&3&5}
      \xleftrightarrow[R_3\rightarrow R_3-R_1]{R_2\rightarrow R_2+2R_1}\myvec{1&1&2\\0&2&3\\0&2&3}\\
@@ -193,9 +194,9 @@ Prove that the following two matrices are not row equivalent
    \vec{B}{'}\vec{X}=0
    \end{align}
    \begin{align}
-   \implies rank(\vec{B}{'})=2< n (order of matrix)
+   \implies rank(\vec{B}{'})+null(\vec{B}{'})^{T}=m\\
+   \implies rank(\vec{B}{'}) = 3-1 = 2
    \end{align}
    Therefore it has infinite many solution.
-   Hence both $\vec{A}{'}$ and $\vec{B}{'}$ have different solutions , so it cannot be row equivalent. 
-
+   Hence both $\vec{A}{'}$ and $\vec{B}{'}$ have different solutions , so it cannot be row equivalent.  
  \end{document}
